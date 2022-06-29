@@ -4,43 +4,43 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>Interactive Stocks</title>
-
-  <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
+
 <body>
-  <div class="header center">
+  <header class="header center">
     <div>
-      <h1>Moment Stock</h1>
+      <h1 id="h1">Moment Stock</h1>
       <div>
-        <h5 class="italicize animate__animated animate__fadein"> <span>Time</span> is <span>Money</span></h5>
+        <h5 class="italicize animate__animated animate__lightSpeedInLeft animate__animated animate__wobble"> <span style="color:rgb(255, 0, 0)">Time </span> is <span style="color:rgb(15, 228, 15)">money</span></h5>
       </div>
     </div>
-  </div>
+  </header>
+
 <main class="mainContainer">
 <div class="row">
   <div class="collection col s3" style="height:650px">
     <form>
       <input type="text" placeholder="NASDAQ">
     </form>
-    <button type="submit">Search</button>
-  <div id="listView">
-    <a href="#" class="collection-item list">Google</a>
-    <a href="#" class="collection-item list">Microsoft</a>
-    <a href="#" class="collection-item list">Amazon</a>
-    <a href="#" class="collection-item list">Meta</a>
-    <a href="#" class="collection-item list">Alphabet</a>
-    <a href="#" class="collection-item list">Tesla</a>
-    <a href="#" class="collection-item list">NVIDIA</a>
-    <a href="#" class="collection-item list">Paypal</a>
-    <a href="#" class="collection-item list">Intel</a>
-    <a href="#" class="collection-item list">Comcast</a>
-    <a href="#" class="collection-item list">Netflix</a>
-    <a href="#" class="collection-item list">Adobe</a>
-    <a href="#" class="collection-item list">Cisco Systems</a>
+    <button type="submit" class="blue-text text-darken-2">Search</button>
+  <div class="font" id="listView">
+    <a href="#" id="h1" class="collection-item list">Google</a>
+    <a href="#" id="h1" class="collection-item list">Microsoft</a>
+    <a href="#" id="h1" class="collection-item list">Amazon</a>
+    <a href="#" id="h1" class="collection-item list">Meta</a>
+    <a href="#" id="h1" class="collection-item list">Alphabet</a>
+    <a href="#" id="h1" class="collection-item list">Tesla</a>
+    <a href="#" id="h1" class="collection-item list">NVIDIA</a>
+    <a href="#" id="h1" class="collection-item list">Paypal</a>
+    <a href="#" id="h1" class="collection-item list">Intel</a>
+    <a href="#" id="h1" class="collection-item list">Comcast</a>
+    <a href="#" id="h1" class="collection-item list">Netflix</a>
+    <a href="#" id="h1" class="collection-item list">Adobe</a>
+    <a href="#" id="h1" class="collection-item list">Cisco Systems</a>
     </div>
   </div>
   <div class="stockInfo">
@@ -53,14 +53,15 @@
   </div>
 </div>
 </main>
+
   <footer class="footer">
     <div>
       <div class="container">
-      Made by <a class="white-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      <a class="white-text text-lighten-3" href="http://materializecss.com">Made By Materialize</a>
       </div>
     </div>
   </footer>
-  <!--  Scripts-->
+
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="./js/init.js"></script>
