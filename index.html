@@ -4,28 +4,28 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>Interactive Stocks</title>
-
-  <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
+
 <body>
   <div class="header center">
     <div>
       <h1>Moment Stock</h1>
       <div>
-        <h5 class="italicize">Time is money</h5>
+        <h5 class="italicize"> <span style="color:rgb(255, 0, 0)">Time </span> is <span style="color:rgb(15, 228, 15)">money</span></h5>
       </div>
     </div>
   </div>
+
 <main class="mainContainer">
 <div class="row">
   <div class="collection col s3" style="height:650px">
     <form>
       <input type="text" placeholder="NASDAQ">
     </form>
-    <button type="submit">Search</button>
+    <button type="submit" class="blue-text text-darken-2">Search</button>
   <div id="listView">
     <a href="#" class="collection-item list">Google</a>
     <a href="#" class="collection-item list">Microsoft</a>
@@ -52,6 +52,7 @@
   </div>
 </div>
 </main>
+
   <footer class="footer">
     <div>
       <div class="container">
@@ -59,7 +60,7 @@
       </div>
     </div>
   </footer>
-  <!--  Scripts-->
+
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="./js/init.js"></script>
