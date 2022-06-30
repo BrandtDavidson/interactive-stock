@@ -13,47 +13,37 @@
 <body>
   <header class="header center">
     <div>
-      <h1 id="h1">Moment Stock</h1>
+      <h1 id="h1">Market Moment</h1>
       <div>
-        <h5 class="italicize animate__animated animate__lightSpeedInLeft animate__animated animate__wobble"> <span style="color:rgb(255, 0, 0)">Time </span> is <span style="color:rgb(15, 228, 15)">money</span></h5>
+        <h5 class="italicize animate__animated animate__lightSpeedInLeft"> <span >Time </span> is <span> money</span></h5>
       </div>
     </div>
   </header>
 
-<main class="mainContainer">
+
 <div class="row">
-  <div class="collection col s3" style="height:650px">
-    <form>
-      <input type="text" placeholder="NASDAQ">
-    </form>
-    <button type="submit" class="blue-text text-darken-2">Search</button>
-  <div class="font" id="listView">
-    <a href="#" id="h1" class="collection-item list">Google</a>
-    <a href="#" id="h1" class="collection-item list">Microsoft</a>
-    <a href="#" id="h1" class="collection-item list">Amazon</a>
-    <a href="#" id="h1" class="collection-item list">Meta</a>
-    <a href="#" id="h1" class="collection-item list">Alphabet</a>
-    <a href="#" id="h1" class="collection-item list">Tesla</a>
-    <a href="#" id="h1" class="collection-item list">NVIDIA</a>
-    <a href="#" id="h1" class="collection-item list">Paypal</a>
-    <a href="#" id="h1" class="collection-item list">Intel</a>
-    <a href="#" id="h1" class="collection-item list">Comcast</a>
-    <a href="#" id="h1" class="collection-item list">Netflix</a>
-    <a href="#" id="h1" class="collection-item list">Adobe</a>
-    <a href="#" id="h1" class="collection-item list">Cisco Systems</a>
-    </div>
-  </div>
-  
-  <div class="stockInfo">
-    <div class="col s9">
-      <p>Test 123</p>
-    </div>
+  <div class="collection col s12 m4 l3" style="height:737px">
+    <span class="promptSearch">Search by $Ticker or Stock name:</span>
+    <div class="input-group m2">
+      <input type="text" class="form-control" id="stockInputField" />
+      <div class="input-group-append">
+        <button id="pinStock" class="btn blue-grey lighten-2 waves-effect waves-light btn-small" type="button">
+          Search 📈
+        </button>
+      </div>
+
+      <!-- Stock Watchlist -->
+      <ul id="stockPinnedList" class="no-bullets">
+        <!-- For JS append <li class="list-group-item"</li>-->
+      </ul>
+
+
   </div>
     </div>
     <br><br>
   </div>
 </div>
-</main>
+
 
   <footer class="footer">
     <div>
