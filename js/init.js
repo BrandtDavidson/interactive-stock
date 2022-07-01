@@ -46,13 +46,16 @@ var displayNews = function(data) {
 
   document.querySelector(".news").innerHTML = headline
   document.querySelector(".article").innerHTML = article
-  document.querySelector(".url").innerHTML = url
+  document.getElementById("url").href =  url 
+  document.getElementById("url").textContent =  "Read More"
   document.querySelector(".news2").innerHTML = headline2
   document.querySelector(".article2").innerHTML = article2
-  document.querySelector(".url2").innerHTML = url2
+  document.querySelector(".url2").href = url2
+  document.querySelector(".url2").textContent = "Read More"
   document.querySelector(".news3").innerHTML = headline3
   document.querySelector(".article3").innerHTML = article3
-  document.querySelector(".url3").innerHTML = url3
+  document.querySelector(".url3").href = url3
+  document.querySelector(".url3").textContent = "Read More"
 }
 
 searchBtn.addEventListener("click" , formSubmitHandler)
