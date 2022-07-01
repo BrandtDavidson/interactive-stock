@@ -1,3 +1,13 @@
+:root{
+    --light-grey: #EAE5E6;
+    --pastel-blue:#C3CCE1;
+    --pastel-pink:#F3DBE7;
+    --light-brown:#D4CAC6;
+    --yellow-beige:#F1DEC2;
+    --black: #0000;
+    --white:#ffff;
+  }
+
 body {
   transition: 1.2s;
 }
@@ -76,19 +86,19 @@ span.promptSearch {
 /* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
 .hitem {
   flex-shrink: 0;
-  width: 20%;
   box-sizing: border-box;
+  width: 50%;
   padding: 10px;
-  text-align: center;
+  display: inline-block;
 }
 
 /* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
 /* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
 @keyframes tickerh {
   0% { transform: translate3d(100%, 0, 0); }
-  100% { transform: translate3d(-400%, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
 }
-.hmove { animation: tickerh linear 15s infinite; }
+.hmove { animation: tickerh linear 17s infinite; }
 .hmove:hover { animation-play-state: paused; }
 
 @keyframes flicker {
@@ -122,3 +132,7 @@ span.promptSearch {
       0 0 5px rgb(12, 110, 25);
   background-color: rgb(0, 0, 0);
 }
+
+
+
+

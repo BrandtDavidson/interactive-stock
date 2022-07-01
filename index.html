@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
   <title>Interactive Stocks</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -15,46 +16,72 @@
     <div>
       <h1 id="h1">Market Moment</h1>
       <div>
-        <h5 class="italicize animate__animated animate__lightSpeedInLeft"> <span style="color:#eee">Time </span> is <span style="color:#eee">money</span></h5>
+        <h5 class="italicize animate__animated animate__lightSpeedInLeft"> <span style="color:#eee">Time </span> is
+          <span style="color:#eee">money</span></h5>
       </div>
     </div>
   </div>
 
-  <div class="hwrap"><div class="hmove">
-    <div class="hitem">NASDAQ📈</div>
-    <div class="hitem"> Apple📈 </div>
-    <div class="hitem"> Tesla📈 </div>
-    <div class="hitem"> Google📈</div>
-  </div></div>
-
-<div class="row">
-  <div class="collection col s12 m4 l3" style="height:737px">
-    <span class="promptSearch text-bold">Search by $Ticker or Stock name:</span>
-    <div class="input-group m2">
-      <input type="text" class="form-control" id="stockInputField" />
-      <div class="input-group-append">
-        <button id="pinStock" class="btn blue-grey lighten-2 waves-effect waves-light btn-small" type="button">
-          Search 📈
-        </button>
-      </div>
-
-      <!-- Stock Watchlist -->
-      <ul id="stockPinnedList" class="no-bullets">
-        <!-- For JS append <li class="list-group-item"</li>-->
-      </ul>
-
-
+  <div class="hwrap">
+    <div class="hmove">
+      <div class="listItem" id="movingTicker"></div>
+        <div class="hitem"> NASDAQ📈</div>
+        <div class="hitem"> Apple📈</div>
+        <div class="hitem"> Tesla📈</div>
+        <div class="hitem"> Google📈</div>
+    </div>
   </div>
+
+  <div class="row">
+    <div class="collection col s12 m4 l3" style="height:737px">
+      <span class="promptSearch text-bold">Search by $Ticker or Stock name:</span>
+      <div class="input-group m2">
+        <input type="text" class="form-control" id="stockInputField" />
+        <div class="input-group-append">
+          <button id="pinStock" class="btn blue-grey lighten-2 waves-effect waves-light btn-small" type="button">
+            Search 📈
+          </button>
+        </div>
+
+        <!-- Stock Watchlist -->
+        <ul id="stockPinnedList" class="no-bullets">
+          <!-- For JS append <li class="list-group-item"</li>-->
+        </ul>
+
+
+      </div>
     </div>
     <br><br>
   </div>
-</div>
+  </div>
 
 
-  <footer class="page-footer grey lighten-3">
-    <div>
-      <div class="container black-text text-lighten-3">
-      Made by <a class="black-text text-lighten-3" href="http://materializecss.com">Stock Squad</a>
+  <footer class="page-footer black lighten-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About the App</h5>
+          <p class="grey-text text-lighten-4">Use this application to keep track of your favorite stocks, stay on top of
+            latest news, and read-up on only the most vital, up-to-date information.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Team's Githubs</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/BrandtDavidson" target="_blank">Brandt
+                Davidson</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/stephenmulrow" target="_blank">Stephen
+                Mulrow</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/matthewtlarson" target="_blank">Matthew
+                Larson</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/skylardorn" target="_blank">Skylar Dorn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright grey">
+      <div class="container">
+        © Market Moment
       </div>
     </div>
   </footer>
@@ -62,5 +89,6 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="./js/init.js"></script>
-  </body>
+</body>
+
 </html>
