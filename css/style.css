@@ -27,30 +27,23 @@ body {
       0 0 45px rgb(4, 220, 33),
       0 0 12px rgb(0, 193, 26),
       0 0 5px rgb(12, 110, 25);
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
-@keyframes flicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-    text-shadow:
-      0 0 4px #fff,
-      0 0 11px #fff,
-      0 0 19px #fff,
-      0 0 40px #0fa,
-      0 0 80px #0fa,
-      0 0 90px #0fa,
-      0 0 100px #0fa,
-      0 0 150px #0fa;
-  }
-  20%, 24%, 55% {       
-    text-shadow: none;
-  }
+#h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(0, 0, 0);
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px rgb(21, 255, 0),
+      0 0 82px rgb(0, 255, 34),
+      0 0 45px rgb(4, 220, 33),
+      0 0 12px rgb(0, 193, 26),
+      0 0 5px rgb(12, 110, 25);
+  background-color: rgba(0, 0, 0, 0);
 }
-
-
-
-
-
 
 .font {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
