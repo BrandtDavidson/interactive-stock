@@ -48,10 +48,6 @@ body {
   padding-top: 10px;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-}
 
 span.promptSearch {
   border: 1em;

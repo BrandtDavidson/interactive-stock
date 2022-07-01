@@ -1,60 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Interactive Stocks</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Interactive Stocks</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="css/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="css/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
 
-<body>
-  <div class="header center">
-    <div>
-      <h1>Moment Stock</h1>
+  <body>
+    <div class="header center">
       <div>
-        <h5 class="italicize animate__animated animate__lightSpeedInLeft"> <span style="color:rgb(255, 0, 0)">Time </span> is <span style="color:rgb(15, 228, 15)">money</span></h5>
+        <h1>Moment Stock</h1>
+        <div>
+          <h5 class="animate__animated animate__lightSpeedInLeft">
+            <span>Time </span> is
+            <span style="color: rgb(15, 228, 15)">money</span>
+          </h5>
+        </div>
       </div>
     </div>
-  </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="collection col s12 m4 l3" style="height: 737px">
+          <span class="promptSearch">Search by $Ticker or Stock name:</span>
+          <div class="buttonPosition center">
+            <div class="input-group col s12 m4 l8">
+              <input type="text" class="form-control" id="stockInputField" />
+              <div class="input-group-append col s12 m4 l8">
+                <button
+                  id="pinStock" class="btn blue-grey lighten-2 waves-effect waves-light btn-small" type="button">
+                  Search📈
+                </button>
+              </div>
+            </div>
 
-
-<div class="row">
-  <div class="collection col s12 m4 l3" style="height:737px">
-    <span class="promptSearch">Search by $Ticker or Stock name:</span>
-    <div class="input-group m2">
-      <input type="text" class="form-control" id="stockInputField" />
-      <div class="input-group-append">
-        <button id="pinStock" class="btn blue-grey lighten-2 waves-effect waves-light btn-small" type="button">
-          Search 📈
-        </button>
+            <!-- Stock Watchlist -->
+            <ul id="stockPinnedList" class="no-bullets">
+              <!-- For JS append <li class="list-group-item"</li>-->
+            </ul>
+          </div>
+        </div>
+        <br /><br />
       </div>
 
-      <!-- Stock Watchlist -->
-      <ul id="stockPinnedList" class="no-bullets">
-        <!-- For JS append <li class="list-group-item"</li>-->
-      </ul>
+      <div class="col s8 m2 main_container" id="currentStockSelected">
+        
+
+        <div class="row">
+          <div class="card">
+            <div id="currentMarketIndex" class="card-body">
+              <h3 class="stockHead">
+                <span class="stock_name"></span>
+                (<span class="date"></span>)
+                <span class="icon"></span>
+              </h3>
+              <div>Intraday Price: <span class="intrPrice"></span> &deg;F</div>
+              <div>Daily Open: <span class="dailyOpen"></span> </div>
+              <div>Daily High: <span class="dailyHigh"></span> </div>
+              <div>Daily Low: <span class="dailyLow"></span></div>
+              <div>Daily Close: <span class="dailyClose"></span></div>
+              <div>Daily Volume: <span class="dailyVolume"></span></div>
+            </div>
+          </div>
+        </div>
 
 
-  </div>
-    </div>
-    <br><br>
-  </div>
-</div>
+        <div class="row-12">
+          <h3>Relevant News Articles: </h3>
+        </div>
 
 
-  <footer class="footer">
-    <div>
-      <div class="container">
-      Made by <a class="white-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        <div id="boxesArticleList" class="row">
+
+        </div>
+
+        <div id="newsPrototype" class="card-body bg-dark text-white">
+            <h4 class="stock_name">
+              (<span class="date"></span>)
+            </h4>
+            <span class="icon"></span>
+            <div>Temp: <span class="temp"></span> &deg;F</div>
+            <div>Wind: <span class="wind"></span> MPH</div>
+            <div>Humidity: <span class="humidity"></span> %</div>
+          </div>
+
       </div>
     </div>
-  </footer>
 
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="./js/init.js"></script>
+    
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
