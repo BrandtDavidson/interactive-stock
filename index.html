@@ -1,66 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Interactive Stocks</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Interactive Stocks</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="css/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="css/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
 
-<body>
-  <div class="header center">
-    <div>
-      <h1 id="h1">Market Moment</h1>
+<main>
+  <body>
+    <div class="header center">
       <div>
-        <h5 class="italicize animate__animated animate__lightSpeedInLeft"> <span style="color:#eee">Time </span> is <span style="color:#eee">money</span></h5>
+        <h1><div class="logo"></div>Market Moment</h1>
+        <div>
+          <h5 class="animate__animated animate__lightSpeedInLeft">
+            <span>Time </span> is
+            <span style="color: rgb(45 159 45)">money</span>
+          </h5>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="hwrap"><div class="hmove">
-    <div class="hitem">NASDAQ📈</div>
-    <div class="hitem"> Apple📈 </div>
-    <div class="hitem"> Tesla📈 </div>
-    <div class="hitem"> Google📈</div>
-  </div></div>
+    <div class="container">
+      <div class="row">
+        <div class="col s3 m3 l3">
+          <span class="promptSearch">Search by Stock $Symbol:</span>
+          <div class="stockSearch">
+              <input type="text" class="form-control" id="stockInputField" placeholder="Ticker Name Only"/>
+              <button
+                id="searchStockBtn"
+                class="btn blue-grey lighten-2 waves-effect waves-light btn-small"
+                type="button"
+              >
+                Search📈
+              </button>
+          </div>
+          <!-- Stock Watchlist -->
+          <ul id="stockPinnedList" class="no-bullets">
+            <!-- For JS append <li class="list-group-item"</li>-->
+          </ul>
+        </div>
 
-<div class="row">
-  <div class="collection col s12 m4 l3" style="height:737px">
-    <span class="promptSearch text-bold">Search by $Ticker or Stock name:</span>
-    <div class="input-group m2">
-      <input type="text" class="form-control" id="stockInputField" />
-      <div class="input-group-append">
-        <button id="pinStock" class="btn blue-grey lighten-2 waves-effect waves-light btn-small" type="button">
-          Search 📈
-        </button>
+        <div class="card col s9 m9 l9" id="currentStockSelected">
+          <div class="row">
+            <div class="card">
+              <div id="currentMarketIndex" class="card-body">
+                <h3 class="stockHead">
+                  <span class="stockName"></span>
+                  <span class="date"></span>
+                  <span class="icon"></span>
+                </h3>
+                <div class="dataView">
+                <div>Daily Open: <span class="dailyOpen"></span></div>
+                <div>Daily High: <span class="dailyHigh"></span></div>
+                <div>Daily Low: <span class="dailyLow"></span></div>
+                <div>Daily Close: <span class="dailyClose"></span></div>
+                <div>Daily Volume: <span class="dailyVolume"></span></div>
+                </div>
+              </div>
+              <div class="chart" id="candlestickChart"></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <h5>Relevant News Articles:</h5>
+          </div>
+
+          <div id="boxesArticleList" class="row"></div>
+
+          <div id="newsPrototype" class="card-body bg-dark text-white">
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="card white medium">
+                  <div class="card-content black-text">
+                    <h3 class="newsCards"><span class="news"></span></h3>
+                    <p class="article"></p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#url" id="url" target="_blank"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="card white small">
+                  <div class="card-content black-text">
+                    <h3 class="newsCards"><span class="news2"></span></h3>
+                    <p class="article2"></p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#url" class="url2" target="_blank"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="card white small">
+                  <div class="card-content black-text">
+                    <h3 class="newsCards"><span class="news3"></span></h3>
+                    <p class="article3"></p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#url3" class="url3" target="_blank"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
       </div>
-
-      <!-- Stock Watchlist -->
-      <ul id="stockPinnedList" class="no-bullets">
-        <!-- For JS append <li class="list-group-item"</li>-->
-      </ul>
-
-
-  </div>
     </div>
-    <br><br>
-  </div>
-</div>
+    
+    <!-- Footer here - materialize wont display properly-->
+    
+    <footer class="page-footer black lighten-3">
+      <div class="container">
+        <div class="row">
+            <h5 class="white-text">About the App</h5>
+            <p class="grey-text text-lighten-4">Use this application to keep track of your favorite stocks, stay on top of
+              latest news, and read-up on only the most vital, up-to-date information.</p>
+        </div>
+        <div class="row s8 l8 m8">
+          <div class="col contactInfo">
+            <span>Contact:</span>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/BrandtDavidson" target="_blank">Brandt
+              Davidson</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://github.com/stephenmulrow" target="_blank">Stephen
+              Mulrow</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://github.com/matthewtlarson" target="_blank">Matthew
+              Larson</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://github.com/skylardorn" target="_blank">Skylar Dorn</a>
+          </li>
 
-
-  <footer class="page-footer grey lighten-3">
-    <div>
-      <div class="container black-text text-lighten-3">
-      Made by <a class="black-text text-lighten-3" href="http://materializecss.com">Stock Squad</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </main>
 
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="./js/init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <script
+      src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdn.anychart.com/releases/8.7.1/js/anychart-stock.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-data-adapter.min.js"></script>
+
+
+    <script src="./js/newsfeature.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
