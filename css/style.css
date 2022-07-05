@@ -8,8 +8,8 @@ body {
 
 .header {
   background-color: rgb(0, 0, 0);
-  color: white;
-  margin-bottom: 20px;
+  color: rgb(236, 236, 236);
+  margin: 20px;
   display: flex;
   justify-content: center;
   height: 180px;
@@ -18,32 +18,16 @@ body {
 #h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(0, 0, 0);
+  background-color: black;
   text-shadow:
       0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px rgb(21, 255, 0),
-      0 0 82px rgb(0, 255, 34),
-      0 0 45px rgb(4, 220, 33),
-      0 0 12px rgb(0, 193, 26),
-      0 0 5px rgb(12, 110, 25);
-  background-color: rgba(0, 0, 0, 0);
+      0 0 42px rgb(66, 99, 138),
+      0 0 82px rgb(13, 113, 157),
+      0 0 45px rgb(255, 255, 255),
+      0 0 12px rgb(6, 92, 132),
+      0 0 5px rgb(6, 52, 100);
 }
 
-#h2 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(0, 0, 0);
-  text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px rgb(21, 255, 0),
-      0 0 82px rgb(0, 255, 34),
-      0 0 45px rgb(4, 220, 33),
-      0 0 12px rgb(0, 193, 26),
-      0 0 5px rgb(12, 110, 25);
-  background-color: rgba(0, 0, 0, 0);
-}
 
 .font {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -99,3 +83,38 @@ span.promptSearch {
   align-items: flex-start;
   display: flex;
 }
+
+.text-bold{
+  font-weight: 700;
+}
+
+/* (A) FIXED WRAPPER */
+.hwrap {
+  overflow: hidden; /* HIDE SCROLL BAR */
+  background: #eee;
+}
+
+/* (B) MOVING TICKER WRAPPER */
+.hmove { display: flex; }
+
+/* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+.hitem {
+  flex-shrink: 0;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+/* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+/* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+@keyframes tickerh {
+  0% { transform: translate3d(100%, 0, 0); }
+  100% { transform: translate3d(-400%, 0, 0); }
+}
+.hmove { animation: tickerh linear 15s infinite; }
+.hmove:hover { animation-play-state: paused; }
+
+
+
+
