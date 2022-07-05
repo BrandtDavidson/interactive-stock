@@ -1,5 +1,63 @@
 body {
-  transition: 1.2s;
+  font-family: 'San-Francisco' 'Open Sans', sans-serif;
+  transition: 2.0s;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  background: #383636;
+}
+
+h1 {
+  color: black;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 42px rgb(66, 138, 134),
+      0 0 82px rgb(13, 113, 157),
+      0 0 45px rgb(255, 255, 255),
+      0 0 12px rgb(6, 92, 132),
+      0 0 5px rgb(6, 52, 100);
+}
+
+footer.page-footer.black.lighten-3 {
+  font-size: 10px;
+}
+
+.logo {
+  background: url(./logo.png);
+  width: 249px;
+  height: 268px;
+  position: absolute;
+  background-size: cover;
+  left: 0;
+  top: -41px;
+  margin-left: -74px;
+}
+
+.header {
+  border-radius: 0 0 20px 20px;
+}
+
+ul#stockPinnedList {
+  text-align: center;
+}
+
+ul#stockPinnedList li:hover {
+  background-color: #eee;
+}
+
+ul#stockPinnedList li:active {
+  background-color: rgb(133, 132, 132);
+}
+
+.col.s3.m3.l3 {
+  background-color: darkgray;
+  border: black;
+  border-radius: 20px;
+  font-weight: 700;
 }
 
 .collection.col.s12.m4.l3 {
@@ -7,7 +65,7 @@ body {
 }
 
 .header {
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.651);
   color: white;
   margin-bottom: 20px;
   display: flex;
@@ -117,4 +175,80 @@ span.promptSearch {
       0 0 12px rgb(0, 193, 26),
       0 0 5px rgb(12, 110, 25);
   background-color: rgb(0, 0, 0);
+}
+
+#candlestickChart {
+  height: 500px;
+  width: 100%;
+}
+.hide {
+  display: none;
+}
+
+.priceUp {
+  background-color: #4daf4a;
+  color: white;
+  border-radius: 5px;
+}
+
+.priceNoChange {
+  background-color: none;
+  color: black;
+  border-radius: 5px;
+}
+
+.priceDown {
+  background-color: #e41a1c;
+  color: white;
+  border-radius: 5px;
+}
+
+.stockSearch {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dataView {
+  display: flex;
+}
+g#ac_layer_1i {
+  display: none;
+}
+
+.stockHead {
+  margin-left: 281px;
+}
+
+.dataView {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.page-footer {
+  padding-top: 0px;
+  color: #fff;
+  position: fixed;
+  bottom: 0px;
+  width: -webkit-fill-available;
+  margin-bottom: -25px;
+}
+
+.newsCards {
+  size: 5px;
+}
+
+.col.contactInfo {
+  float: right;
+  /* margin-bottom: -138px; */
+  margin-top: -87px;
+}
+
+div#currentStockSelected {
+  background-color: darkgrey;
+  border-radius: 20px;
 }
